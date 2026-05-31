@@ -40,7 +40,7 @@ Source: Kaggle (Mobius)
 License: CC0 Public Domain
 
 Description:
-This dataset contains personal fitness tracker data from 30 Fitbit users who consented to the submission of their tracking information. The dataset includes daily activity, steps, calories burned, sleep monitoring, heart rate measurements, and other fitness-related metrics.
+This dataset contains personal fitness tracker data from 35 Fitbit users who consented to the submission of their tracking information. The dataset includes daily activity, steps, calories burned, sleep monitoring, heart rate measurements, and other fitness-related metrics.
 
 ### Data Limitations
 
