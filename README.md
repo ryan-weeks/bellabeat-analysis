@@ -33,29 +33,62 @@ This analysis is intended for business stakeholders who will use the findings to
 
 ### Primary Dataset
 
-Dataset: Fitbit Fitness Tracker Data
+**Dataset:** Fitbit Fitness Tracker Data
 
-Source: Kaggle (Mobius)
+**Source:** Kaggle (Mobius)
 
-License: CC0 Public Domain
+**License:** CC0 Public Domain
 
-Description:
-This dataset contains personal fitness tracker data from 35 Fitbit users who consented to the submission of their tracking information. The dataset includes daily activity, steps, calories burned, sleep monitoring, heart rate measurements, and other fitness-related metrics.
+### Description
+
+This project uses Fitbit fitness tracker data made publicly available through Kaggle. The dataset contains activity, sleep, heart rate, and weight-tracking information collected from Fitbit users over multiple collection periods.
+
+During the data inventory phase, two Fitbit exports were evaluated and consolidated into a single master dataset for analysis. The resulting dataset contains daily activity records spanning March 12, 2016 through May 12, 2016.
 
 ### Data Limitations
 
-- Small sample size (30 users)
-- Data collected during a limited time period
-- No demographic information provided
-- Data may not represent the broader wearable device market
-- Potential self-selection bias among participants
+* Relatively small sample size
+* Data collected during a limited time period
+* No demographic information provided
+* Data may not represent the broader wearable device market
+* Potential self-selection bias among participants
+* Limited ability to generalize findings beyond the study population
 
 ### Purpose
 
-The dataset will be used to identify behavioral patterns among wearable device users and develop marketing recommendations for Bellabeat products.
+The dataset will be used to identify behavioral patterns among wearable device users and develop data-driven marketing recommendations for Bellabeat products.
 
-## Data Inventory
+## Data Inventory & Dataset Selection
 
-To be completed during the data acquisition and inventory phase.
+### Data Inventory Findings
 
-The Fitbit dataset contains multiple exports covering different collection periods. These exports will be evaluated for completeness, consistency, user overlap, and suitability before a final dataset selection decision is made.
+Two Fitbit exports were evaluated during the data inventory phase:
+
+| Export   | Date Range                      | Users | Records |
+| -------- | ------------------------------- | ----- | ------- |
+| Export 1 | March 12, 2016 – April 12, 2016 | 35    | 457     |
+| Export 2 | April 12, 2016 – May 12, 2016   | 33    | 940     |
+
+Key findings:
+
+* Export 2 contained a more complete collection of activity and sleep-related datasets.
+* All 33 users present in Export 2 also appeared in Export 1.
+* Only two users appeared exclusively in Export 1.
+* The exports shared identical schemas and data types.
+* Twenty-four overlapping user-date records were identified on April 12, 2016.
+* Overlapping records contained differing activity values between exports.
+
+### Dataset Selection Decision
+
+The two exports were merged into a single master dataset after validating participant overlap, date continuity, schema compatibility, and record integrity.
+
+A detailed review of overlapping records revealed that Export 2 contained more complete activity information for shared user-date combinations. As a result, overlapping records from Export 1 were removed and the corresponding Export 2 records were retained.
+
+### Master Dataset Summary
+
+* Total Records: 1,373
+* Unique Users: 35
+* Duplicate User-Date Records: 0
+* Observation Period: March 12, 2016 – May 12, 2016
+
+The resulting master dataset serves as the primary source for all subsequent analyses and contains 62 days of activity data spanning March 12, 2016 through May 12, 2016.
